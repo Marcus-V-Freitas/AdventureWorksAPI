@@ -10,9 +10,7 @@ namespace Core.Repository
     {
         Task<T> InsertAsync(T model);
 
-        Task<bool> EditAsync(T model);
-
-        Task<bool> DeleteAsync(T model);
+        Task<bool> EditAsync(T model, int id);
 
         Task<bool> DeleteAsync(Expression<Func<T, bool>> where);
 
