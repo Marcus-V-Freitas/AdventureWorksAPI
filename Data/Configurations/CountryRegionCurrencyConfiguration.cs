@@ -8,6 +8,8 @@ namespace Data.Configurations
     {
         public void Configure(EntityTypeBuilder<CountryRegionCurrency> builder)
         {
+            builder.ToTable("countryregioncurrency");
+
             builder.HasKey(x => x.CountryRegionCode);
 
             builder.HasOne(x => x.Currency)

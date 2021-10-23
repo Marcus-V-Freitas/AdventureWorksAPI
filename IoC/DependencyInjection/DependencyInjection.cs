@@ -1,4 +1,6 @@
 ﻿using Data.Context;
+using Data.Repository;
+using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +13,9 @@ namespace IoC.DependencyInjection
         {
             string mySqlConnectionStr = configuration.GetConnectionString("DefaultConnection");
             services.AddDbContextPool<AdventureWorksContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
+
+            services.AddScoped<IProductRepository, ProductRepository>();
+
             return services;
         }
     }

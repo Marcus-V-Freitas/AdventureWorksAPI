@@ -2,10 +2,9 @@
 {
     public class SalesOrderHeadersSalesReason
     {
-        public int SalesOrderID { get; set; }
-        public int SalesReasonID { get; set; }
+        public int? SalesOrderID { get; private set; }
+        public int? SalesReasonID { get; private set; }
 
-        public virtual SalesOrderDetail SalesOrderDetail { get; set; }
-        public virtual SalesReason SalesReason { get; set; }
+        public virtual SalesReason SalesReason { get; private set; }
     }
 }

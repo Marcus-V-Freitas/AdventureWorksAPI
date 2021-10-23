@@ -2,11 +2,11 @@
 {
     public class Customer
     {
-        public int CustomerID { get; set; }
-        public int TerritoryID { get; set; }
-        public string AccountNumber { get; set; }
-        public string CustomerType { get; set; }
+        public int CustomerID { get; private set; }
+        public int TerritoryID { get; private set; }
+        public string AccountNumber { get; private set; }
+        public string CustomerType { get; private set; }
 
-        public virtual SalesTerritory SalesTerritory { get; set; }
+        public virtual SalesTerritory SalesTerritory { get; private set; }
     }
 }

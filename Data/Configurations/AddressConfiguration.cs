@@ -8,6 +8,8 @@ namespace Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Address> builder)
         {
+            builder.ToTable("address");
+
             builder.HasKey(x => x.AddressID);
 
             builder.HasOne(x => x.StateProvince)

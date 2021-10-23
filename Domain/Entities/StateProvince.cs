@@ -2,14 +2,14 @@
 {
     public class StateProvince
     {
-        public int StateProvinceID { get; set; }
-        public string StateProvinceCode { get; set; }
-        public string CountryRegionCode { get; set; }
-        public int IsOnlyStateProvinceFlag { get; set; }
-        public string Name { get; set; }
-        public int TerritoryID { get; set; }
+        public int? StateProvinceID { get; private set; }
+        public string StateProvinceCode { get; private set; }
+        public string CountryRegionCode { get; private set; }
+        public bool IsOnlyStateProvinceFlag { get; private set; }
+        public string Name { get; private set; }
+        public int? TerritoryID { get; private set; }
 
-        public virtual CountryRegion CountryRegion { get; set; }
-        public virtual SalesTerritory SalesTerritory { get; set; }
+        public virtual CountryRegion CountryRegion { get; private set; }
+        public virtual SalesTerritory SalesTerritory { get; private set; }
     }
 }

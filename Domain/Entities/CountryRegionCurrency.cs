@@ -2,9 +2,9 @@
 {
     public class CountryRegionCurrency
     {
-        public string CountryRegionCode { get; set; }
-        public string CurrencyCode { get; set; }
+        public string CountryRegionCode { get; private set; }
+        public string CurrencyCode { get; private set; }
 
-        public virtual Currency Currency { get; set; }
+        public virtual Currency Currency { get; private set; }
     }
 }
