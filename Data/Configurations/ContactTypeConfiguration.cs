@@ -8,6 +8,8 @@ namespace Data.Configurations
     {
         public void Configure(EntityTypeBuilder<ContactType> builder)
         {
+            builder.ToTable("contacttype");
+
             builder.HasKey(x => x.ContactTypeID);
         }
     }

@@ -2,11 +2,11 @@
 {
     public class EmployeeAddress
     {
-        public int EmployeeID { get; set; }
-        public int AddressID { get; set; }
+        public int? EmployeeID { get; private set; }
+        public int? AddressID { get; private set; }
 
-        public virtual Employee Employee { get; set; }
+        public virtual Employee Employee { get; private set; }
 
-        public virtual Address Address { get; set; }
+        public virtual Address Address { get; private set; }
     }
 }

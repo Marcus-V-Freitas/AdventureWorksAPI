@@ -8,6 +8,8 @@ namespace Data.Configurations
     {
         public void Configure(EntityTypeBuilder<CountryRegion> builder)
         {
+            builder.ToTable("countryregion");
+
             builder.HasKey(x => x.CountryRegionCode);
         }
     }

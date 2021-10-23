@@ -2,8 +2,8 @@
 {
     public class Department
     {
-        public int DepartmentID { get; set; }
-        public string Name { get; set; }
-        public string GroupName { get; set; }
+        public int? DepartmentID { get; private set; }
+        public string Name { get; private set; }
+        public string GroupName { get; private set; }
     }
 }

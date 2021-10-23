@@ -2,7 +2,7 @@
 {
     public class CountryRegion
     {
-        public string CountryRegionCode { get; set; }
-        public string Name { get; set; }
+        public string CountryRegionCode { get; private set; }
+        public string Name { get; private set; }
     }
 }

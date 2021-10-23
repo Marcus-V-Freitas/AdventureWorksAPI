@@ -8,6 +8,8 @@ namespace Data.Configurations
     {
         public void Configure(EntityTypeBuilder<ContactCreditcard> builder)
         {
+            builder.ToTable("contactcreditcard");
+
             builder.HasKey(x => new { x.ContactID, x.CreditCardID });
 
             builder.HasOne(x => x.Contact)
