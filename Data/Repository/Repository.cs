@@ -27,21 +27,11 @@ namespace Data.Repository
             return model;
         }
 
-        public async Task<bool> EditAsync(T model)
+        public async Task<bool> EditAsync(T model, int id)
         {
             bool status = false;
-            _context.Entry(model).State = EntityState.Modified;
-            if (await SaveAsync())
-            {
-                status = true;
-            }
-            return status;
-        }
-
-        public async Task<bool> DeleteAsync(T model)
-        {
-            bool status = false;
-            _context.Entry(model).State = EntityState.Deleted;
+            var exist = await _model.FindAsync(id);
+            _context.Entry(exist).CurrentValues.SetValues(model);
             if (await SaveAsync())
             {
                 status = true;
@@ -55,7 +45,11 @@ namespace Data.Repository
             T model = _model.Where(where).FirstOrDefault();
             if (model != null)
             {
-                status = await DeleteAsync(model);
+                _context.Entry(model).State = EntityState.Deleted;
+                if (await SaveAsync())
+                {
+                    status = true;
+                }
             }
             return status;
         }
