@@ -2,14 +2,14 @@
 {
     public class TransactionHistory
     {
-        public int TransactionID { get; set; }
-        public int ProductID { get; set; }
-        public int ReferenceOrderID { get; set; }
-        public int ReferenceOrderLineID { get; set; }
-        public string TransactionType { get; set; }
-        public int Quantity { get; set; }
-        public double ActualCost { get; set; }
+        public int? TransactionID { get; private set; }
+        public int? ProductID { get; private set; }
+        public int? ReferenceOrderID { get; private set; }
+        public int? ReferenceOrderLineID { get; private set; }
+        public string TransactionType { get; private set; }
+        public int? Quantity { get; private set; }
+        public double? ActualCost { get; private set; }
 
-        public virtual Product Product { get; set; }
+        public virtual Product Product { get; private set; }
     }
 }

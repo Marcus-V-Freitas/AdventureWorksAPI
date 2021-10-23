@@ -2,15 +2,15 @@
 {
     public class SalesTerritory
     {
-        public int TerritoryID { get; set; }
-        public string Name { get; set; }
-        public string CountryRegionCode { get; set; }
-        public string Group { get; set; }
-        public double SalesYTD { get; set; }
-        public double SalesLastYear { get; set; }
-        public double CostYTD { get; set; }
-        public double CostLastYear { get; set; }
+        public int? TerritoryID { get; private set; }
+        public string Name { get; private set; }
+        public string CountryRegionCode { get; private set; }
+        public string Group { get; private set; }
+        public double? SalesYTD { get; private set; }
+        public double? SalesLastYear { get; private set; }
+        public double? CostYTD { get; private set; }
+        public double? CostLastYear { get; private set; }
 
-        public virtual CountryRegion CountryRegion { get; set; }
+        public virtual CountryRegion CountryRegion { get; private set; }
     }
 }

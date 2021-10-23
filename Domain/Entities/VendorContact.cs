@@ -2,12 +2,12 @@
 {
     public class VendorContact
     {
-        public int VendorID { get; set; }
-        public int ContactID { get; set; }
-        public int ContactTypeID { get; set; }
+        public int? VendorID { get; private set; }
+        public int? ContactID { get; private set; }
+        public int? ContactTypeID { get; private set; }
 
-        public virtual Vendor Vendor { get; set; }
-        public virtual Contact Contact { get; set; }
-        public virtual ContactType ContactType { get; set; }
+        public virtual Vendor Vendor { get; private set; }
+        public virtual Contact Contact { get; private set; }
+        public virtual ContactType ContactType { get; private set; }
     }
 }

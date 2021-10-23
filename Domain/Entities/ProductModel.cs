@@ -2,9 +2,9 @@
 {
     public class ProductModel
     {
-        public int ProductModelID { get; set; }
-        public string Name { get; set; }
-        public string CatalogDescription { get; set; }
-        public string Instructions { get; set; }
+        public int? ProductModelID { get; private set; }
+        public string Name { get; private set; }
+        public string CatalogDescription { get; private set; }
+        public string Instructions { get; private set; }
     }
 }

@@ -2,7 +2,7 @@
 {
     public class Currency
     {
-        public string CurrencyCode { get; set; }
-        public string Name { get; set; }
+        public string CurrencyCode { get; private set; }
+        public string Name { get; private set; }
     }
 }

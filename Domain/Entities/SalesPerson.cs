@@ -2,12 +2,14 @@
 {
     public class SalesPerson
     {
-        public int SalesPersonID { get; set; }
-        public int TerritoryID { get; set; }
-        public double SalesQuota { get; set; }
-        public double Bonus { get; set; }
-        public double CommissionPct { get; set; }
-        public double SalesYTD { get; set; }
-        public double SalesLastYear { get; set; }
+        public int? SalesPersonID { get; private set; }
+        public int? TerritoryID { get; private set; }
+        public double? SalesQuota { get; private set; }
+        public double? Bonus { get; private set; }
+        public double? CommissionPct { get; private set; }
+        public double? SalesYTD { get; private set; }
+        public double? SalesLastYear { get; private set; }
+
+        public virtual SalesTerritory SalesTerritory { get; private set; }
     }
 }

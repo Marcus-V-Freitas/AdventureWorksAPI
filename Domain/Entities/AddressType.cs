@@ -2,7 +2,7 @@
 {
     public class AddressType
     {
-        public int AddressTypeID { get; set; }
-        public string Name { get; set; }
+        public int? AddressTypeID { get; private set; }
+        public string Name { get; private set; }
     }
 }

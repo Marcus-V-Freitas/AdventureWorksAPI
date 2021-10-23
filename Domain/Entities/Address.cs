@@ -2,13 +2,13 @@
 {
     public class Address
     {
-        public int AddressID { get; set; }
-        public string AddressLine1 { get; set; }
-        public string AddressLine2 { get; set; }
-        public string City { get; set; }
-        public int StateProvinceID { get; set; }
-        public string PostalCode { get; set; }
+        public int? AddressID { get; private set; }
+        public string AddressLine1 { get; private set; }
+        public string AddressLine2 { get; private set; }
+        public string City { get; private set; }
+        public int? StateProvinceID { get; private set; }
+        public string PostalCode { get; private set; }
 
-        public virtual StateProvince StateProvince { get; set; }
+        public virtual StateProvince StateProvince { get; private set; }
     }
 }
