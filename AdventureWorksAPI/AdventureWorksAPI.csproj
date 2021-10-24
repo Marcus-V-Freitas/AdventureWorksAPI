@@ -4,11 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>acb6ac6a-ef80-4eb3-b7f9-3952a725be8b</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+	<Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="appsettings.json" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.11">
@@ -21,6 +19,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IoC\IoC.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
