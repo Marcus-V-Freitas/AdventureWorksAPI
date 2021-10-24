@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Data.Repository
 {
-    public class ProductRepository : Repository<Product>, IProductRepository, IHealthCheck
+    public class EmployeeRepository : Repository<Employee>, IEmployeeRepository, IHealthCheck
     {
-        public ProductRepository(AdventureWorksContext context) : base(context)
+        public EmployeeRepository(AdventureWorksContext context) : base(context)
         {
         }
 

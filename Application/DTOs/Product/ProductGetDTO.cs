@@ -7,7 +7,7 @@ namespace Application.DTOs.Product
 {
     public class ProductGetDTO
     {
-        public int ProductID { get; set; }
+        public int? ProductID { get; set; }
 
         [Required]
         [MinLength(3)]

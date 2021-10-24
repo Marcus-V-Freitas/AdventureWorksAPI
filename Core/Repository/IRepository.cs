@@ -29,5 +29,7 @@ namespace Core.Repository
         IQueryable<T> QueryFast(params Expression<Func<T, object>>[] includes);
 
         Task<bool> SaveAsync();
+
+        string ConnectionString { get; }
     }
 }

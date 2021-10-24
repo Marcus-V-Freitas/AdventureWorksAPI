@@ -4,7 +4,7 @@ namespace Domain.Entities
 {
     public class Product
     {
-        public int ProductID { get; private set; }
+        public int? ProductID { get; private set; }
         public string Name { get; private set; }
         public string ProductNumber { get; private set; }
         public bool MakeFlag { get; private set; }

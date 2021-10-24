@@ -11,8 +11,10 @@ namespace Data.Repository
 {
     public abstract class Repository<T> : IRepository<T> where T : class, new()
     {
-        private readonly AdventureWorksContext _context;
-        private readonly DbSet<T> _model;
+        protected readonly AdventureWorksContext _context;
+        protected readonly DbSet<T> _model;
+
+        public string ConnectionString => _context.Database.GetConnectionString();
 
         public Repository(AdventureWorksContext context)
         {

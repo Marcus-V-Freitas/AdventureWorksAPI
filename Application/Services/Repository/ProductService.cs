@@ -27,7 +27,7 @@ namespace Application.Services.Repository
         public async Task<bool> EditAsync(ProductPutDTO model)
         {
             var product = _mapper.Map<Product>(model);
-            return await _productRepository.EditAsync(product, product.ProductID);
+            return await _productRepository.EditAsync(product, product.ProductID.Value);
         }
 
         public async Task<List<ProductGetDTO>> FindAllAsync(string search)
